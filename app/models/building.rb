@@ -1,4 +1,5 @@
 class Building < ApplicationRecord
+  has_many :offices
 
   def number_of_floors_available
     # Will not work until relationships and schema are corretly setup
@@ -13,5 +14,7 @@ class Building < ApplicationRecord
   def empty_offices
     number_of_floors_available.map { |f| offices.build(floor: f) }
   end
+
+ 
 
 end

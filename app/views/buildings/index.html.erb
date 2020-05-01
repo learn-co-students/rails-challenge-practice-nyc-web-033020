@@ -1,0 +1,5 @@
+<h1>Buildings Index Page </h1>
+
+<% @buildings.each do |build| %> 
+<p><%= link_to build.name, building_path(build) %> in <%= build.country %> </p>
+<%end%>

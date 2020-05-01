@@ -1,0 +1,15 @@
+<h1><%= @company.name %> </h1>
+
+<p>Total Cost of Rent: $<%= @company.rent_cost %></p>
+
+<h3>Offices </h3>
+<% @company.offices.each do |off| %>
+<p><%= off.building.name %> || <%= off.building.address %></p>
+<%end%> 
+
+
+<h3>Employees </h3>
+<% @company.employees.each do |person| %> 
+<p><%= person.name %> || <%= person.title %> || <%= link_to 'Edit Employee', edit_employee_path(person) %> </p>
+<%end %> 
+
