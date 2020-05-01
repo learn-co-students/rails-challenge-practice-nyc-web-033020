@@ -1,0 +1,20 @@
+<h1>Edit Building</h1>
+
+<%= form_for @building do |b| %> 
+<%= b.label :name %>
+<%= b.text_area :name %> 
+<br>
+<%= b.label :country %>
+<%= b.text_area :country %> 
+<br>
+<%= b.label :address %>
+<%= b.text_area :address %> 
+<br>
+<%= b.label :number_of_floors %>
+<%= b.text_area :number_of_floors %> 
+<br>
+<%= b.label :rent_per_floor %>
+<%= b.text_area :rent_per_floor %> 
+<br>
+<%= b.submit %>
+<%end%> 
